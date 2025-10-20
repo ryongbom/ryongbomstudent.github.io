@@ -11,7 +11,7 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	unsigned short int x, a, b;
-	cout << "??????? ?????? ????? :";
+	cout << " :";
 	cin >> x;
 	
 	b = x % 10;
@@ -19,42 +19,42 @@ int main()
 
 	if (b != 0) {
 		switch (a) {
-		case 2: cout << "???????? gbagcate"; break;
-		case 3: cout << "???????? threecate"; break;
-		case 4: cout << "????? copok"; break;
-		case 5: cout << "????????? pategcate"; break;
-		case 6: cout << "?????????? sectegcate"; break;
+		case 2: cout << "gbagcate"; break;
+		case 3: cout << "threecate"; break;
+		case 4: cout << "copok"; break;
+		case 5: cout << "pategcate"; break;
+		case 6: cout << "sectegcate"; break;
 		default: break;
 		}
 
 		if (b > 4) {
 			switch (b) {
-			case 5: cout << "???? ??? pate ret"; break;
-			case 6: cout << "????? ??? secte ret"; break;
-			case 7: cout << "???? ??? cem ret"; break;
-			case 8: cout << "?????? ??? bocem ret"; break;
-			case 9: cout << "?????? ??? gebate ret"; break;
+			case 5: cout << "pate ret"; break;
+			case 6: cout << "secte ret"; break;
+			case 7: cout << "cem ret"; break;
+			case 8: cout << "bocem ret"; break;
+			case 9: cout << "gebate ret"; break;
 			default: break;
 			}
 		}
 		else if (1 < b && b < 5) {
 			switch (b) {
-			case 2: cout << "??? ???? gba goga"; break;
-			case 3: cout << "??? ???? three goga"; break;
-			case 4: cout << "?????? ???? xitere goga"; break;
+			case 2: cout << "gba goga"; break;
+			case 3: cout << "three goga"; break;
+			case 4: cout << "xitere goga"; break;
 			default: break;
 			}
 		}
 		else
-			cout << "???? ??? one gog";
+			cout << "one gog";
 	}
 	else if (b == 0){
 		switch (a) {
-		case 2: cout << "???????? ??? gbagcate ret"; break;
-		case 3: cout << "???????? ??? threecate ret"; break;
-		case 4: cout << "????? ??? copok ret"; break;
-		case 5: cout << "?????????? ??? pategcate ret"; break;
-		case 6: cout << "??????????? ??? sectegcate ret"; break;
+		case 2: cout << "gbagcate ret"; break;
+		case 3: cout << "threecate ret"; break;
+		case 4: cout << "copok ret"; break;
+		case 5: cout << "pategcate ret"; break;
+		case 6: cout << "sectegcate ret"; break;
 		default: break;
 		}
 	}

@@ -89,3 +89,5 @@ Qt 6.6 LTS
 QML
 C++
 JavaScript
+
+FITING!!!

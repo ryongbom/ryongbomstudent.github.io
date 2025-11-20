@@ -89,3 +89,4 @@ Qt 6.6 LTS
 QML
 C++
 JavaScript
+작업동료　림원국

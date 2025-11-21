@@ -34,7 +34,7 @@ private:
     QString pendingMultiplicativeOperator;
     bool waitingForOperand;
 
-    bool Calculator(double rightOperand, const QString &pendingOperator){
+    bool calculate(double rightOperand, const QString &pendingOperator){
         if (pendingOperator == tr("+")){
             sumSoFar += rightOperand;
         }else if (pendingOperator == tr("-")){

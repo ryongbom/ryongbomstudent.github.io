@@ -21,9 +21,9 @@ class String {
 			delete [] buf;
 		}
 		friend istream& operator >> (istream& is, String& s) {
-			char tmp[1000];¡¡ 
+			char tmp[1000];Â¡Â¡ 
 			is.getline(tmp, 1000);
-			delete [] s.buf; // ÌÁ¡¡ÃÍ½£ÃÍ¡¡¼Ñ²÷°¡¡© 
+			delete [] s.buf; // ÃŒÃÂ¡Â¡ÃƒÃÂ½Â£ÃƒÃÂ¡Â¡Â¼Ã‘Â²Ã·Â°Â¡Â¡Â© 
 			s.len = strlen(tmp);
 			s.buf = new char [s.len + 1];
 			strcpy(s.buf, tmp);
@@ -63,4 +63,3 @@ int main() {
 	cout << s2 << endl;
 	return 0;
 }
-

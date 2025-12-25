@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript practice 1</title>
+</head>
+<body>
+    
+    <h2>What can javascript Do?</h2>
+
+    <p id="demo">JavaScript can change HTML content.</p>
+
+    <button type="button" onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'">Click Me!</button>
+
+    <p>JavaScript can change HTML attribute values.</p>
+
+    <p id="demo_1">JavaScript can change the style of an HTML element.</p>
+
+    <button type="button"
+    onclick="document.getElementById('demo_1').style.fontSize='35px'">Click Me!</button>
+
+    <h2>My first Web Page</h2>
+    <p>My first paragraph.</p>
+
+    <p>Never call document.write after the document has finished loading.
+        It will overwrite the whole document.
+    </p>
+
+    <script>
+        document.write(5 + 6);
+    </script>
+
+    <h2>The window.print() Method</h2>
+
+    <p>Click the button to print the current page.</p>
+
+    <button onclick="window.print()">Print this page</button>
+</body>
+</html>

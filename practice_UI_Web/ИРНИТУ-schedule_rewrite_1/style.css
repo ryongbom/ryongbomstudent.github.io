@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 100%;
+}
+.top-header {
+    background-color: #d3d3d3cb;
+    padding: 0 0;
+    border-bottom: 1px solid #ddd;
+    margin-left: 90px;
+    margin-right: 90px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center; 
+}
+.left-top-header .top-info {
+    margin-left: 20px;
+    display: flex;
+    list-style-type: none;
+    gap: 5px;
+    color: #666;
+}
+.right-top-header ul {
+    align-items: center;
+    display: flex;
+    list-style-type: none;
+    gap: 5px;
+    padding-right: 10px;
+}
+.top-info .separator {
+    color: #999;
+}
+.week-type {
+    color: #0066cc;
+}
+.week-type .strong {
+    font-weight: bold;
+    margin-right: 220px;
+}
+.lang-btn {
+    text-decoration: none;
+    color: #0066cc;
+    padding: 10px;
+}
+.lang-btn:hover {
+    background-color: orange;
+    color: white;
+}
+.images-typeOne {
+    margin-right: 5px;
+    padding-top: 5px;
+    width: 45px;
+}
+.images-typeOne:hover {
+    background-color: orange;
+}
+.middle-header {
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.middle-header .university {
+    display: flex;
+}
+.image-mark-university {
+    width: 130px;
+    height: 130px;
+    margin-left: 20px;
+    margin-right: 25px;
+}
+.name-university {
+    margin-top: 5px;
+    color: #0f0fa4;
+    font-weight: bold;
+    font-size: 18px;
+}
+.search-border {
+    width: 220px;
+    height: 35px;
+}
+.search-block ul {
+    list-style-type: none;
+}
+.search-block ul .usearch-border {
+    display: flex;
+}
+.search-block ul .usearch-other {
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+    margin-top: 10px;
+}
+.bottom-header .nav-menu {
+    background-color: #d3d3d3cb;
+    display: flex;
+    list-style-type: none;
+    margin-left: 90px;
+    margin-right: 90px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+.nav-link {
+    color: black;
+    text-decoration: none;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.nav-link:hover {
+    background-color: orange;
+    color: white;
+}
+.main {
+    margin-left: 100px;
+    margin-right: 90px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.schedule {
+    width: 850px;    
+}
+.schedule-title {
+    padding-top: 10px;
+}
+.schedule-title-name {
+    color: orange;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.schedule-error-block {
+    font-size: 18px;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 40px;
+    background-color: #F2DEDE;
+    color: #A94442;
+    border-radius: 0.5cap;
+}
+.schedule-date-block {
+    margin-top: 20px;
+    font-size: 18px;
+    background-color: #D9EDF7;
+    color: #31708F;
+    padding-left: 20px;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    border-radius: 0.5cap;
+}
+.schedule-date-text {
+    padding-bottom: 8px;
+}
+.main-right {
+    width: 380px;
+}
+.schedule-list-name {
+    color: #6899D7;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 15px;
+    padding-left: 20px;
+    background-color: #F0F0F0;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    border-bottom: 1px solid #CECECE;
+}
+.schedule-list {
+    list-style-type: none;
+    background-color: #F0F0F0;
+    width: 380px;
+    padding-bottom: 20px;
+}
+.schedule-list tr, td {
+    padding: 10px;
+    border-bottom: 1px solid #CECECE;
+}
+.schedule-list-text {
+    text-decoration: none;
+    color: #7D7D7D;
+    font-size: 18px;
+    padding: 10px;
+}
+.schedule-list-text:hover {
+    color: white;
+    background-color: orange;
+}
+.schedule-list tr:hover {
+    background-color: orange;
+}
+.hour-schedule:hover {
+    background-color: #F0F0F0;
+}
+.schedule-body-time {
+    font-size: 18px;
+    width: 120px;
+}
+.schedule-body-title {
+    color: #6899D7;
+    font-size: 25px;
+    margin-top: 20px;
+}
+.schedule-body-subject {
+    width: 760px;
+}
+.schedule-body-information {
+    width: 680px;
+}
+.schedule-body-position {
+    width: 80px;
+}
+.schedule-body-subject-type {
+    font-size: 18px;
+}
+.schedule-body-subject-club {
+    font-size: 18px;
+}
+.schedule-body-subject-name {
+    font-size: 22px;
+}
+.teacher-name {
+    text-decoration: none;
+    color: #6899D7;
+}
+.club-name {
+    text-decoration: none;
+    color: #6899D7;
+}
+.teacher-name:hover {
+    text-decoration: underline;
+    color: #0066cc;
+}
+.club-name:hover {
+    text-decoration: underline;
+    color: #0066cc;
+}
+.schedule-body-position-name {
+    font-size: 18px;
+    color: #6899D7;
+}
+.calender-header {
+    background-color: #F0F0F0;
+    margin-top: 30px;
+    align-items: center;
+    justify-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.calender-header-month {
+    color: #6899D7;
+    font-size: 28px;
+}
+.calender-header-year {
+    color: #6899D7;
+}
+.calender-date-day {
+    justify-items: center;
+    align-items: center;
+}
+.calender-day {
+    border-collapse: collapse;
+}
+.calender-date td,
+.calender-date-day td {
+    border: none;
+}
+.day {
+    font-size: 16px;   
+    text-decoration: none;
+    color: #6899D7;
+    padding: 9px;
+}
+.day:hover {
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+}
+.add-information {
+    display: flex;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-top: 30px;
+    background-color: #E0E0E0;
+}
+.footer-left {
+    width: 630px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.footer-left-header {
+    color: #555555;
+    margin-bottom: 25px;
+}
+.footer-left-body {
+    font-size: 20px;
+    color: #909090;
+}
+.footer-left-link-picture {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 25px;
+}
+.footer-left-link-name {
+    text-decoration: none;
+    color: #B2B2B2;
+}
+.footer-middle {
+    margin-left: 20px;
+    width: 330px;
+    color: #838383;
+}
+.footer-name {
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    color: #555555;
+}
+.footer-right {
+    color: #838383;
+}
+.footer-link {
+    text-decoration: none;
+    color: #428BCA;
+}

@@ -8,7 +8,7 @@ using namespace std;
 class TreeNode {
 	int val;
 	TreeNode* left;
-	TreeNdoe* right;
+	TreeNode* right;
 	
 	TreeNode() : val(0), left(nullptr), right(nullptr) {}
 	
@@ -43,6 +43,18 @@ class BinaryTree {
 	}
 	
 	int getHightHelper(TreeNode* node) {
-		
+		if (node == nullptr) return 0;
+		return max(getHightHelper(node->left), getHightHelper(node->right)) + 1;
+	}
+
+	int getSizeHelper(TreeNode* node) {
+		if (node == nullptr) return 0;
+		return getSizeHelper(node->left) + getSizeHelper(node->right) + 1;
+	}
+
+	int getLeafCountHelper(TreeNode* node) {
+		if (node == nullptr) return 0;
+		if (node->left == nullptr && node->right == nullptr) return 1;
+		return getLeafCountHelper(node->left) + getLeafCountHelper(node->right);
 	}
 };

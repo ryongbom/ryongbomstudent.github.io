@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template 연습</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; }
+        p { color: #666; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>안녕하세요, <%= name %>님! 👋</h1>
+        <p><%= message %></p>
+        <p>현재 시간: <%= new Date().toLocaleString('ko-KR') %></p>
+    </div>
+</body>
+</html>

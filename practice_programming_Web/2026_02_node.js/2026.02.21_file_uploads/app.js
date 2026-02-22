@@ -13,11 +13,21 @@ app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
 });
 
-const upload = multer({ storage: storage });
-
 app.get('/', (req, res) => {
     res.render('index');
 })
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'uploads/');
+    },
+
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + '-' + file.originalname);
+    }
+});
+
+const upload = multer({ storage: storage });
 
 app.post('/upload', upload.single('myFile'), (req, res) => {
     res.send(`
@@ -30,12 +40,5 @@ app.post('/upload', upload.single('myFile'), (req, res) => {
     console.log('Information:', req.file);
 });
 
-const storage = multer.diskStorage({
-    destination: (req, res, cb) => {
-        cb(null, 'uploads/');
-    },
 
-    filename: (req, res, cb) => {
-        cb(null, Date.now() + '-' + file.originalname);
-    }
-})
+

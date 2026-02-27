@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <queue>
 
 using namespace std;
 
@@ -56,56 +57,6 @@ BTreeNode* findWithParent(int theKey, BTreeNode* tree, BTreeNode** outParent) {
     }
     return tree;
 }
-
-
-
-
-
-void addNode(int x, BTreeNode* root) {
-
-    //заменеям вызов функции, на переприсвивание корневого узла
-
-
-
-    BTreeNode** cur = &root; //указатель на указатель на узел
-
-
-
-    while (*cur) {
-
-        BTreeNode& node = **cur; //ссылка, чтобы не делать "->"
-
-        if (x < node.field) {
-
-            cur = &node.left;
-
-        }
-
-        else if (x > node.field) {
-
-            cur = &node.right;
-
-        }
-
-        else {
-
-            return;
-
-        }
-
-    }
-
-    *cur = new BTreeNode();
-
-    (*cur)->field = x;
-
-    (*cur)->left = NULL;
-
-    (*cur)->right = NULL;
-
-}
-
-
 
 BTreeNode* deleteNode(int x, BTreeNode* tree) {
     BTreeNode** parent = &tree;
@@ -176,232 +127,28 @@ BTreeNode* deleteNode(int x, BTreeNode* tree) {
     return tree;
 }
 
-
-
-void treePrintRecursively(BTreeNode* tree, string move) {
-
-
-
-    if (tree != NULL) { //Пока не встретится пустой узел
-
-
-
-        cout << move << "my val is " << tree->field
-
-            << endl; //Отображаем корень дерева
-
-
-
-        move += "\t";
-
-
-
-        cout << move << " left: " << endl;
-
-
-
-        treePrintRecursively(tree->left,
-
-            move); //Рекурсивная функция для левого поддерева
-
-
-
-        cout << move << " right: " << endl;
-
-
-
-        treePrintRecursively(tree->right,
-
-            move); //Рекурсивная функция для правого поддерева
-
-    }
-
-}
-
-
-
-#endif
-
--------------------------------------------------- -
-
-#include <iostream>
-
-#include "BTree.h"
-
-using namespace std;
-
-
-
-void deleteSingleRootTree()
-
-{
-
-    BTreeNode* root = addNodeRecursively(8, NULL);
-
-    treePrintRecursively(root, "");
-
-    cout << "\n After  delete: ";
-
-
-
-    root = deleteNode(8, root);
-
-    treePrintRecursively(root, "");
-
-}
-
-
-
-
-
-void deleteRootElementTree()
-
-{
-
-    BTreeNode* root = addNodeRecursively(8, NULL);
-
-    addNodeRecursively(5, root);
-
-    addNodeRecursively(10, root);
-
-    treePrintRecursively(root, "");
-
-    cout << "\n After  delete: ";
-
-
-
-    root = deleteNode(8, root);
-
-    treePrintRecursively(root, "");
-
-}
-
-
-
-void deleteNodeInTree()
-
-{
-
-    BTreeNode* root = addNodeRecursively(8, NULL);
-
-
-
-    addNodeRecursively(5, root);
-
-    addNodeRecursively(10, root);
-
-    addNodeRecursively(11, root);
-
-    addNodeRecursively(2, root);
-
-    addNodeRecursively(7, root);
-
-
-
-    treePrintRecursively(root, "");
-
-
-
-    BTreeNode* resNode = find(5, root);
-
-
-
-    root = deleteNode(5, root);
-
-
-
-    treePrintRecursively(root, "");
-
-}
-
-
-
-void findWithParentTest()
-
-{
-
-    BTreeNode* root = addNodeRecursively(8, NULL);
-
-    addNodeRecursively(10, root);
-
-    addNodeRecursively(2, root);
-
-    addNodeRecursively(7, root);
-
-    addNode(140, root);
-
-    addNodeRecursively(6, root);
-
-
-
-
-
-    BTreeNode* nullPtr(0);
-
-    BTreeNode** parent = &nullPtr;
-
-
-
-    BTreeNode* resNode2 = findWithParent(5, root, parent);
-
-
-
-    if (resNode2)
-
-    {
-
-        cout << "\n Node: " << resNode2->field;
-
-        if (!(*parent))
-
-        {
-
-            cout << "\n Parent is absent ";
-
+// Функция для обхода дерева в ширину
+
+void BFS(BTreeNode* root) {
+    if (root == nullptr) return;
+    std::queue<BTreeNode*> queue;
+    queue.push(root);
+    while (!queue.empty()) {
+        BTreeNode* current = queue.front();
+        queue.pop();
+        cout << current->myData.key << " ";
+        if (current->left != nullptr) {
+            queue.push(current->left);
         }
-
-        else
-
-        {
-
-            cout << "\n Parent: " << (*parent)->field;
-
+        if (current->right != nullptr) {
+            queue.push(current->right);
         }
-
     }
-
-    else
-
-    {
-
-        cout << "\n Node not found ";
-
-    }
-
 }
 
+int main() {
 
-
-int main()
-
-{
-
-    cout << "\n deleteNodeInTree TEST\n";
-
-    // deleteNodeInTree();
-
-
-
-    cout << "\n deleteSingleRootTree TEST\n";
-
-    // deleteSingleRootTree();
-
-
-
-    cout << "\n delete RootTree TEST\n";
-
-    deleteRootElementTree();
-
+    return 0;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

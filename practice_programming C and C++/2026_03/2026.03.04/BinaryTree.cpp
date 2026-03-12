@@ -135,6 +135,9 @@ int main()
     tree.insert(10);
     tree.insert(30);
     tree.insert(5);
+    tree.insert(25);
+    tree.insert(35);
+    tree.insert(50);
 
     tree.printInorder();
 

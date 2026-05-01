@@ -1,12 +1,11 @@
 // 1. max.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
-//#include <iostream>
-//using namespace std;
+// #include "stdafx.h"
+// #include <iostream>
+// using namespace std;
 
-
-//int main()
+// int main()
 //{
 //	int a[1000];
 //	int i, max = 0;
@@ -29,7 +28,7 @@ int main()
 	int n, max = 0;
 	do
 	{
-		scanf_s("%d", &n);
+		scanf("%d", &n);
 		if (max < n)
 			max = n;
 	} while (n);
